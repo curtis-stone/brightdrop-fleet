@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+
+<div class="info-container">
+    <!-- forEach() creates a div for every vehicle registered -->
+    <% vehicles.forEach(function(vehicle) { %>
+     <div class="details">
+         <h2>
+             <strong><%= vehicle.name %></strong>
+         </h2>
+         <p>
+            <%= vehicle.name %> is currently located in <%= vehicle.location %>, GA.</p>
+             <p>The current battery level for this delivery vehicle is <%= vehicle.charge %>%
+         </p>
+     </div>
+
+ <% }) %>

@@ -1,0 +1,56 @@
+hr {
+    max-width: 50%;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+#mapid { 
+    height: 500px;
+    margin-bottom: 30px;
+ }
+
+.info-container {
+    margin-bottom: 50px;
+}
+.info {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    margin: 6px;
+    text-align: center
+}
+
+.info:hover {
+    background-color: rgb(231, 231, 231);
+    transition: 0.3s;
+}
+
+.details {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    margin: 15px;
+    text-align: left
+}
+
+.details p {
+    font-size: 20px;
+}
+.details:hover {
+    background-color: rgb(231, 231, 231);
+    transition: 0.3s;
+}
+
+hr {
+    max-width: 50%;
+}

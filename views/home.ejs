@@ -1,0 +1,56 @@
+<%- include("partials/header") -%>
+
+    <div id="mapid">
+        <!-- Scipt for Leaflet Map API -->
+        <script>
+            var mymap = L.map('mapid').setView([33.9, -84.30], 10);
+            L.tileLayer('https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=ICK712u1GbcBhI63f9Pw', {
+                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>")'
+            }).addTo(mymap);
+
+                // Map Markers w/ corresponding events
+                var marker = L.marker([33.76, -84.4]).addTo(mymap);
+                var marker2 = L.marker([34.0, -84.3]).addTo(mymap)
+                var marker3 = L.marker([33.9, -84]).addTo(mymap)
+
+                // Map Marker Events
+                marker.bindPopup("This is Vehicle 1");
+                marker.on('mouseover', function(event){
+                marker.openPopup();
+                });
+                marker.on('mouseout', function(event){
+                marker.closePopup();
+                });
+
+                marker2.bindPopup("This is Vehicle 2");
+                marker2.on('mouseover', function(event){
+                marker2.openPopup();
+                });
+                marker2.on('mouseout', function(event){
+                marker2.closePopup();
+                });
+                marker3.bindPopup("This is Vehicle 3");
+                marker3.on('mouseover', function(event){
+                marker3.openPopup();
+                });
+                marker3.on('mouseout', function(event){
+                marker3.closePopup();
+                });
+        </script>
+    </div>
+    <hr>    
+    <div class="info-container">
+       <!-- forEach() creates a div for every vehicle registered -->
+       <% vehicles.forEach(function(vehicle) { %>
+        <div class="info">
+            <h3>
+                <strong><%= vehicle.name %></strong>
+            </h3>
+            <p>
+                <strong>Location:</strong> <%= vehicle.location %> | 
+                <strong>Charge</strong>: <%= vehicle.charge %>
+            </p>
+        </div>
+   
+    <% }) %>
+</div>

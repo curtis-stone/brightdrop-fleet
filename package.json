@@ -1,0 +1,16 @@
+{
+  "name": "fleet-admin",
+  "version": "1.0.0",
+  "description": "Brightdrop Fleet Admin Web App",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "CJ Stone",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
